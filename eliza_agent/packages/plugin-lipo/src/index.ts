@@ -1,21 +1,16 @@
 import type { Plugin } from "@elizaos/core";
-import { transferAction } from "./actions/transfer";
-import { swellWalletProvider } from "./providers/wallet";
-import { extractBridgeParamsAction } from "./actions/bridge";
 import { multiNetworkWalletProvider } from "./providers/multiwallet";
-import { priceAction } from "./actions/price";
-import { listEarningOpportunitiesAction } from "./actions/opportunities";
-import { earnETHAction } from "./actions/earn";
-import { swapAction } from "./actions/swap";
+import { volatilityPredictionAction } from "./actions/predict";
 
-export const swellPlugin: Plugin = {
-    name: "swell",
-    description: "swellchain integration plugin",
+
+export const lipoPlugin: Plugin = {
+    name: "lipo",
+    description: "lipo integration plugin",
     providers: [multiNetworkWalletProvider],
     evaluators: [],
     services: [],
-    actions: [transferAction,extractBridgeParamsAction,swapAction, priceAction,listEarningOpportunitiesAction,earnETHAction],
+    actions: [volatilityPredictionAction],
 };
 
-export default swellPlugin;
+export default lipoPlugin;
  

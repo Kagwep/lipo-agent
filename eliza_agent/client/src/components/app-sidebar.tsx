@@ -37,7 +37,7 @@ export function AppSidebar() {
                             <NavLink to="/">
                                 <div className="flex flex-col gap-0.5 leading-none">
                                     <span className="font-semibold">
-                                        SwellChain  Agents
+                                        Lipo  Agents
                                     </span>
                                     <span className="text-xs">powered by ElizaOs</span>
                                 </div>

@@ -1,13 +1,4 @@
-// ABI for StandardBridge (works for both L1 and L2)
-export const StandardBridgeABI = [
-    // Bridge ETH
-    "function bridgeETH(uint32 _minGasLimit, bytes _extraData) payable",
-    "function bridgeETHTo(address _to, uint32 _minGasLimit, bytes _extraData) payable",
-    
-    // Bridge ERC20
-    "function bridgeERC20(address _localToken, address _remoteToken, uint256 _amount, uint32 _minGasLimit, bytes _extraData)",
-    "function bridgeERC20To(address _localToken, address _remoteToken, address _to, uint256 _amount, uint32 _minGasLimit, bytes _extraData)"
-  ];
+
   
   // ABI for ERC20
 export const ERC20ABI = [
@@ -83,12 +74,7 @@ export const ERC20ABI = [
   ]
 
 
-  
- export const TellerABI = [
-    "function deposit(address depositAsset, uint256 depositAmount, uint256 minimumMint) returns (uint256)",
-    "function bulkWithdraw(address withdrawAsset, uint256 shareAmount, uint256 minimumAssets, address to) returns (uint256)",
-    "function isSupported(address) view returns (bool)"
-  ];
+
   
   export const VaultABI = [
     "function balanceOf(address) view returns (uint256)",

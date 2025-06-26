@@ -19,7 +19,7 @@ import {
     stringToUuid,
     validateCharacterConfig,
 } from "@elizaos/core";
-import { swellCharacter } from "./swell.charachter.ts";
+import { lipoCharacter } from "./lipo.charachter.ts";
 
 import { bootstrapPlugin } from "@elizaos/plugin-bootstrap";
 import JSON5 from 'json5';
@@ -363,7 +363,7 @@ export async function loadCharacters(
 
     if (loadedCharacters.length === 0) {
         elizaLogger.info("No characters found, using default character");
-        loadedCharacters.push(swellCharacter);
+        loadedCharacters.push(lipoCharacter);
     }
 
     return loadedCharacters;
@@ -833,7 +833,7 @@ const startAgents = async () => {
     let serverPort = Number.parseInt(settings.SERVER_PORT || "3000");
     const args = parseArguments();
     const charactersArg = args.characters || args.character;
-    let characters = [swellCharacter];
+    let characters = [lipoCharacter];
 
     if ((charactersArg) || hasValidRemoteUrls()) {
         characters = await loadCharacters(charactersArg);

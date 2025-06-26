@@ -149,9 +149,9 @@ importers:
       '@elizaos/plugin-bootstrap':
         specifier: workspace:*
         version: link:../packages/plugin-bootstrap
-      '@elizaos/plugin-swell':
+      '@elizaos/plugin-lipo':
         specifier: workspace:*
-        version: link:../packages/plugin-swell
+        version: link:../packages/plugin-lipo
       '@types/node':
         specifier: ^22.13.5
         version: 22.13.5
@@ -609,7 +609,7 @@ importers:
         specifier: 8.3.5
         version: 8.3.5(@swc/core@1.11.4(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.3)(typescript@5.8.2)(yaml@2.7.0)
 
-  packages/plugin-swell:
+  packages/plugin-lipo:
     dependencies:
       '@elizaos/core':
         specifier: workspace:*
@@ -23347,7 +23347,7 @@ snapshots:
       array-differ: 3.0.0
       array-union: 2.1.0
       arrify: 2.0.1
-      minimatch: 3.0.5
+      minimatch: 3.1.2
 
   mute-stream@0.0.8: {}
 
