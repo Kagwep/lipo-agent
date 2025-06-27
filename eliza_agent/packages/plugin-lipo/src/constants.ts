@@ -1,0 +1,1 @@
+export const RPC_SEPOLIA = "https://eth-sepolia.public.blastapi.io";

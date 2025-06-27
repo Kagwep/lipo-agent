@@ -3,8 +3,10 @@ import json
 import time
 from datetime import datetime
 
+#http://lipo-agent-production.up.railway.app/
+
 class ElizaAPIClient:
-    def __init__(self, base_url="http://swell-agent-production.up.railway.app"):
+    def __init__(self, base_url="https://lipo-agent-production.up.railway.app"):
         self.base_url = base_url
         self.session = requests.Session()
         
@@ -110,7 +112,7 @@ def chat_session():
     agents = client.get_agents()
     if not agents:
         print("❌ No agents available or server not responding")
-        print("Make sure your ElizaOS server is running on http://swell-agent-production.up.railway.app/")
+        print("Make sure your ElizaOS server is running on https://lipo-agent-production.up.railway.app/")
         return
     
     print(f"✅ Found {len(agents)} agent(s)")

@@ -1,6 +1,7 @@
 import type { Plugin } from "@elizaos/core";
 import { multiNetworkWalletProvider } from "./providers/multiwallet";
 import { volatilityPredictionAction } from "./actions/predict";
+import { rebalancerAction } from "./actions/rebalanceAction";
 
 
 export const lipoPlugin: Plugin = {
@@ -9,7 +10,7 @@ export const lipoPlugin: Plugin = {
     providers: [multiNetworkWalletProvider],
     evaluators: [],
     services: [],
-    actions: [volatilityPredictionAction],
+    actions: [volatilityPredictionAction,rebalancerAction],
 };
 
 export default lipoPlugin;

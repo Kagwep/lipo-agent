@@ -7,6 +7,8 @@ import {
     type State,
 } from "@elizaos/core";
 import { predictionTemplate } from "../templates";
+import nodemailer from "nodemailer";
+import { sendVolatilityEmail } from "../utils";
 
 // Prediction types
 type PredictionRequest = {
@@ -85,6 +87,8 @@ export class VolatilityPredictionAction {
     // Method to format prediction response for display
     formatPredictionResponse(prediction: PredictionResponse): string {
         const { prediction: pred } = prediction;
+
+        
         
         return `📈 **Volatility Analysis for ${pred.trading_pair}**
         
@@ -144,6 +148,8 @@ export const volatilityPredictionAction: Action = {
 
             // Fetch the prediction
             const predictionResult = await action.fetchVolatilityPrediction(tokenPair, days);
+
+            await sendVolatilityEmail(runtime, predictionResult);
             
             if (callback) {
                 const formattedResponse = action.formatPredictionResponse(predictionResult);

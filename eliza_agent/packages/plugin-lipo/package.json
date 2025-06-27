@@ -20,7 +20,9 @@
     ],
     "dependencies": {
         "@elizaos/core": "workspace:*",
+        "dotenv": "16.4.5",
         "ethers": "^6.13.5",
+        "nodemailer": "7.0.3",
         "vitest": "2.1.9"
     },
     "devDependencies": {
