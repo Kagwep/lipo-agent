@@ -1,0 +1,16 @@
+{
+  "name": "lipo-predict-lambda",
+  "version": "1.0.0",
+  "description": "AWS Lambda function for interacting with agent",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "package": "zip -r lambda-predict-deployment.zip . -x '*.git*' 'node_modules/.cache/*'"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

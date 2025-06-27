@@ -186,7 +186,7 @@ def chat_session():
             if not user_input:
                 continue
             
-            print("⏳ Sending message...")
+            print("⏳ Sending message...", agent_id)
             response = client.send_message(agent_id, user_input)
             
             if response and isinstance(response, list):
