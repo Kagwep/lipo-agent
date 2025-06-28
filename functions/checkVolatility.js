@@ -5,7 +5,7 @@ const volatilityResponse = await Functions.makeHttpRequest({
         "Content-Type": "application/json"
     },
     data: {
-        action: "volatility"
+        days: "15"
     }
 });
 
