@@ -7,7 +7,8 @@ An autonomous liquidity management system that combines machine learning volatil
 
 ## 🌟 Overview
 
-Lipo Agent revolutionizes DeFi liquidity management through intelligent automation. Built on Eliza OS, it provides conversational AI capabilities alongside  ML-driven position management, delivering both automated LP optimization and real-time volatility insights maximizing your potential returns and minimizing risks..
+Lipo Agent revolutionizes DeFi liquidity management through intelligent automation. Built on Eliza OS, it provides conversational AI capabilities alongside  ML-driven position management, delivering both automated LP optimization and real-time volatility insights maximizing your potential returns and minimizing risks.
+
 
 ## 🏗️ Architecture
 
@@ -84,6 +85,126 @@ Simply message the agent:
 
 ### Smart Contract Integration
 Deploy contracts and configure Chainlink automation for hands-free operation.
+
+**Contract Address** `0xb851ca6b43d0019f9b40ea97cd8ec508b0eb369f`
+**Subscription id**  `5198`
+
+
+## Live Testing
+
+### Access the Live Demo
+Visit: **https://lipo.astro-arch.com/**
+
+*Note: This is a test environment for demonstration purposes.*
+
+### Key Features to Test
+
+#### 1. Volatility Analysis
+Get real-time volatility data for cryptocurrency assets.
+
+**Example Usage:**
+```
+what's the volatility of LINK
+```
+
+**Important Requirements:**
+- Minimum timeframe: 15 days
+- The agent will return current volatility metrics for the specified asset
+
+#### 2. Portfolio Rebalancing
+Test automated rebalancing with custom thresholds.
+
+**Example Usage:**
+```
+rebalance LINK with custom limit 1.5
+```
+
+**How it Works:**
+- There's already a test position configured
+- You can set any threshold below the predicted volatility level
+- The agent will execute rebalancing based on your specified limits
+
+## Local Setup & Installation
+
+### Prerequisites
+- Node.js and npm installed
+- Git for cloning the repository
+- Ethereum wallet private key
+- Anthropic API key
+
+### Step-by-Step Installation
+
+#### 1. Clone the Repository
+```bash
+git clone https://github.com/Kagwep/lipo-agent.git
+cd lipo-agent
+```
+
+#### 2. Navigate to Eliza Agent Directory
+```bash
+cd eliza-agent
+```
+
+#### 3. Environment Configuration
+Rename the environment file:
+```bash
+mv .env.local .env
+```
+
+#### 4. Configure Environment Variables
+Edit your `.env` file and add the following required variables:
+
+```env
+SERVER_URL=http://localhost:3000
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+EMAIL_RECIPIENT=your_email@example.com
+ETHEREUM_PRIVATE_KEY=your_ethereum_private_key
+ETHEREUM_PROVIDER_URL=https://eth-sepolia.public.blastapi.io
+```
+
+**Network Options:**
+- **Mainnet:** `https://eth-mainnet.public.blastapi.io`
+- **Sepolia Testnet:** `https://eth-sepolia.public.blastapi.io` (recommended for testing)
+
+#### 5. Install Dependencies
+```bash
+pnpm install
+```
+
+#### 6. Start the Agent
+```bash
+pnpm start
+```
+
+#### 6. Start the client
+```bash
+pnpm start:client
+```
+
+
+Your local LIPO agent should now be running on `http://localhost:3000`
+
+## Usage Examples
+
+### Volatility Queries
+- `what's the volatility of LINK`
+
+
+### Rebalancing Commands
+- `rebalance ETH with custom limit 1.5`
+
+## Configuration Notes
+
+### API Keys Required
+1. **Anthropic API Key**: For AI processing capabilities
+2. **Ethereum Private Key**: For blockchain interactions
+3. **Email Configuration**: For notifications and alerts
+
+### Network Selection
+Choose your Ethereum network based on your needs:
+- Use **Sepolia** for testing without real funds
+- Use **Mainnet** for live trading (exercise caution)
+
 
 ## 📊 Performance Highlights
 
